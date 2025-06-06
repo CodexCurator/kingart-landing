@@ -1,0 +1,45 @@
+/* --- Basic Setup --- */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f8ff; /* A simple fallback color */
+}
+
+#world-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* --- Content Styling --- */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 500;
+    letter-spacing: 3px;
+    line-height: 1.2;
+    animation: text-breath 12s infinite ease-in-out;
+    /* Color will be a dark, rich complementary color set by JS */
+    text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes text-breath {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.02); opacity: 1; }
+}
